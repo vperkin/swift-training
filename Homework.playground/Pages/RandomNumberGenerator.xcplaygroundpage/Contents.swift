@@ -11,9 +11,9 @@ print("full array", array)
 //print("duplicated numbers", array.filter{ i in array.filter{ $0 == i }.count > 1})
 
 let duplicates = array.filter{ i in array.filter{ $0 == i }.count > 1}
-print("duplicates", duplicates)
+print("duplicates only", duplicates)
 let firstDuplicatedNumber = duplicates.first ?? -1
-print("firstDuplicatedNumber", firstDuplicatedNumber)
+print("firstDuplicatedNumber is", firstDuplicatedNumber)
 if let i = array.firstIndex(of : firstDuplicatedNumber ) {
     return i
 } else{

@@ -3,14 +3,15 @@
 import Foundation
 import Darwin
 
-var array = [5028, -2635, -373, 669, -5999, 2034, -4166, -928, 3440, -8457, 2269, 3143, -1105000]
+var array = [3,5,2,0,1]
 
 print(array)
 
+//search and swap min and max number indexes using min/max method
 if let indexMax = array.firstIndex(of : array.max() ?? -1),
    let indexMin = array.firstIndex(of: array.min() ?? -1) {
-    array[indexMax ] = array.min() ?? 0
-    array[indexMin ] = array.max() ?? 0
+//giving found values to swapAt method
+    array.swapAt(indexMax, indexMin)
 } else {
     print("index not found")
 }

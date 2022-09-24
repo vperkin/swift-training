@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <playground version='6.0' target-platform='macos' buildActiveScheme='true' importAppTypes='true'>
     <pages>
-        <page name='LargestNumber'/>
-        <page name='Untitled Page'/>
+        <page name='5.2 intersection'/>
+        <page name='5.1 Min Max Replace'/>
+        <page name='RandomNumberGenerator'/>
+        <page name='5.3 credentials in dic'/>
     </pages>
 </playground>
