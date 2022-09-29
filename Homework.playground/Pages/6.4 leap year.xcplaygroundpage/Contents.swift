@@ -5,7 +5,7 @@ import Foundation
 typealias VoidCallback = (Int) -> ()
 
 func getValues(x:Int, callbackFunc: VoidCallback) {
-    if x % 4 == 0 || x % 100 == 0 {
+    if x % 4 == 0 || x % 100 == 0 || x % 400 == 0 {
         callbackFunc(x)
     }
 }
