@@ -2,15 +2,15 @@
 
 import Foundation
 
-typealias VoidCallback = () -> ()
+typealias VoidCallback = (Int) -> ()
 
-func GetValues(x:Int, callbackFunc: VoidCallback) {
+func getValues(x:Int, callbackFunc: VoidCallback) {
     if x % 4 == 0 {
-        callbackFunc()
+        callbackFunc(x)
     }
 }
 
-GetValues(x: 1996, callbackFunc: {print("Это високосный год")})
+getValues(x: 1996, callbackFunc: {x in print("\(x) Это високосный год")})
 
 
 //: [Next](@next)
