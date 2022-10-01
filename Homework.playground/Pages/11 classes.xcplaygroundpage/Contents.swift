@@ -52,3 +52,8 @@ newTransfer1.destination = "CitiBank, Petrov.P, 123456, Share 02"
 newTransfer1.createTransfer()
 
 
+let TransfersArray:[Transfer] = [newTransfer, newTransfer1]
+
+for transfer in TransfersArray {
+    print(transfer.fee, transfer.curency)
+}
