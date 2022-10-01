@@ -17,7 +17,6 @@ class Transfer {
 
 class InternalTransfer: Transfer {
     override func createTransfer() {
-        var fee = 0
         transferID += 1
         print("Transfer ID \(transferID) for \(amount)\(curency) from your \(source) to your \(destination) created, transfer fee is \(fee) \(curency)")
     }
@@ -25,8 +24,15 @@ class InternalTransfer: Transfer {
 
 
 class ExternalTransfer: Transfer {
+    //var fee = amount * 3 / 100
+    override var fee:Int {
+        get {
+        if amount * 3 / 100 < 50 {return 50}
+        else {return amount * 3 / 100}
+        }
+        set {newValue}
+    }
     override func createTransfer() {
-        var fee = amount * 3 / 100
         transferID += 1
         print("Transfer ID \(transferID) for \(amount)\(curency) from your \(source) to exernal account \(destination) created, transfer fee is \(fee) \(curency)")
     }
