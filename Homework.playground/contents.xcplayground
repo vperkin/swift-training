@@ -9,5 +9,6 @@
         <page name='6.2 string a tuple object'/>
         <page name='6.3 function optional closure'/>
         <page name='6.4 leap year'/>
+        <page name='11 classes'/>
     </pages>
 </playground>
