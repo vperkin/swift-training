@@ -10,6 +10,6 @@
         <page name='6.3 function optional closure'/>
         <page name='6.4 leap year'/>
         <page name='11 classes'/>
-        <page name='13 Queue'/>
+        <page name='13 Stack'/>
     </pages>
 </playground>
