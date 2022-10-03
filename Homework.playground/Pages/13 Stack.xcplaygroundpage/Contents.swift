@@ -22,8 +22,5 @@ privateEmailId.pop()
 privateEmailId.push(301)
 
 
-//privateEmailId.output()
-
-
 
 //: [Next](@next)
