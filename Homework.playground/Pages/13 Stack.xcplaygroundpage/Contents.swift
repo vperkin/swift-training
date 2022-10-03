@@ -2,7 +2,7 @@
 
 import Foundation
 
-struct Queue<Email> {
+struct SuperStack<Email> {
     var emails: [Email] = []
     
     mutating func push(_ email:Email) {
@@ -15,11 +15,16 @@ struct Queue<Email> {
     }
 }
 
-var privateEmailId = Queue(emails: [11,12,13,14,15,16,17,18])
+var privateEmailId = SuperStack(emails: [11,12,13,14,15,16,17,18])
 
 privateEmailId.push(20)
 privateEmailId.pop()
 privateEmailId.push(301)
+
+var privateEmailTitle = SuperStack(emails: ["Hi Sam", "Special announcement", "Atention!"])
+
+privateEmailTitle.push("Tuesday survay")
+
 
 
 
