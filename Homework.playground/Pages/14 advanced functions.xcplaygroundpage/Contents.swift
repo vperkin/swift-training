@@ -83,3 +83,4 @@ func printAndRemoveLastNumber2(nextNumber: @autoclosure () -> Int) {
 // функция так же удаляет последний элемент массива array, но теперь может
 // передавать Int в качестве параметра, не зная, что объявлен функциональный тип
 printAndRemoveLastNumber2(nextNumber: array.removeLast())
+
