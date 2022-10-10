@@ -22,7 +22,7 @@ findOut(function:squareOf, 3.0)
 findOut(function:rootOf, 9.0)
 
 
-var array = [0,123,124,345,457,87,43534564,5678,990,44,3,2,2]
+var array = [0,123,124,345,457,87,43534564,5678,990,44,3,2]
 
 // Фильтрует массив по одному параметру
 func arrayFilter(array: [Int], closure: (Int) -> Bool) -> [Int] {
@@ -61,7 +61,25 @@ func isDivisibleByThree (x value: Int) -> Bool {
 // Печатает массив отфтфильтрованный функцией isOdd
 print(arrayFilter(array: array, closure: isOdd))
 
-// Печатает массив отфтфильтрованный функциями isOdd и isDivisibleByThree
+// Печатает массив отфильтрованный функциями isOdd и isDivisibleByThree
 print(arrayDoubleFilter(array: array,
                   firstClosure: isOdd,
                   secondClosure: isDivisibleByThree))
+
+// функция без автоклоужера
+func printAndRemoveLastNumber1(nextNumber: () -> Int) {
+    print(nextNumber())
+}
+
+// клоужер удаляет последний элемент массива array
+printAndRemoveLastNumber1(nextNumber: {array.removeLast()})
+
+
+// функция c автоклоужером
+func printAndRemoveLastNumber2(nextNumber: @autoclosure () -> Int) {
+    print(nextNumber())
+}
+
+// функция так же удаляет последний элемент массива array, но теперь может
+// передавать Int в качестве параметра, не зная, что объявлен функциональный тип
+printAndRemoveLastNumber2(nextNumber: array.removeLast())
