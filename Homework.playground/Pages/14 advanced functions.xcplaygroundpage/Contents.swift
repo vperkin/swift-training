@@ -53,15 +53,15 @@ func isOdd(y value: Int) -> Bool {
     value % 2 != 0
 }
 
-// Проверяет, является ли число больше 100
+// Проверяет, делится ли на 3
 func isDivisibleByThree (x value: Int) -> Bool {
     value % 3 != 0
 }
 
-// Создание массива B только из четных чисел массива A
+// Печатает массив отфтфильтрованный функцией isOdd
 print(arrayFilter(array: array, closure: isOdd))
 
-// Создание массива C только из четных чисел массива А, которые не больше 100
+// Печатает массив отфтфильтрованный функциями isOdd и isDivisibleByThree
 print(arrayDoubleFilter(array: array,
                   firstClosure: isOdd,
                   secondClosure: isDivisibleByThree))
