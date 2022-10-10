@@ -84,3 +84,21 @@ func printAndRemoveLastNumber2(nextNumber: @autoclosure () -> Int) {
 // передавать Int в качестве параметра, не зная, что объявлен функциональный тип
 printAndRemoveLastNumber2(nextNumber: array.removeLast())
 
+
+// Создание массива нечетных чисел в заданном диапазоне с использованием внутренней функции isOdd
+func createOddArray(from: Int, to: Int) -> [Int] {
+    guard from < to else { return [] }
+    let array: [Int] = Array(from...to)
+    return arrayFilter(array: array, closure: isOdd)
+}
+
+print(createOddArray(from: 0, to: 30))
+
+
+// Дженерик функция сложения (с условием, что это числовое значение)
+func multi<Num: Numeric>(_ number1: Num, _ number2: Num) -> Num {
+    number1 * number2
+}
+
+multi(34.765, 12.564)
+multi(300, 300)
