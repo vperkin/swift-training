@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        startStopButton.backgroundColor = UIColor.green
+        //startStopButton.backgroundColor = UIColor.green
         
     }
     
@@ -38,8 +38,7 @@ class ViewController: UIViewController {
             self.timer.invalidate()
             self.TimerLabel.text = self.makeTimeString(minutes: 0, seconds: 0)
             self.startStopButton.setTitle("Start", for: .normal)
-            //self.startStopButton.setTitleColor(UIColor.green, for: .normal)
-            self.startStopButton.backgroundColor = UIColor.green
+            //self.startStopButton.backgroundColor = UIColor.green
         }))
         //no option
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {(_) in
@@ -54,13 +53,13 @@ class ViewController: UIViewController {
             timerCounting = false
             timer.invalidate()
             startStopButton.setTitle("Start", for: .normal)
-            startStopButton.backgroundColor = UIColor.green
+            //startStopButton.backgroundColor = UIColor.green
             
         }
         else{
          timerCounting = true
             startStopButton.setTitle("Stop", for: .normal)
-            self.startStopButton.backgroundColor = UIColor.red
+            //self.startStopButton.backgroundColor = UIColor.red
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerCounter), userInfo: nil, repeats: true)
         }
     }
