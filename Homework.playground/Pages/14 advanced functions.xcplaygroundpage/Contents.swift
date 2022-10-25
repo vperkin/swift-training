@@ -49,12 +49,12 @@ func arrayDoubleFilter(array: [Int],
 }
 
 // Проверяет на нечетность
-func isOdd(y value: Int) -> Bool {
+func isOdd(value: Int) -> Bool {
     value % 2 != 0
 }
 
 // Проверяет, делится ли на 3
-func isDivisibleByThree (x value: Int) -> Bool {
+func isDivisibleByThree (value: Int) -> Bool {
     value % 3 != 0
 }
 
