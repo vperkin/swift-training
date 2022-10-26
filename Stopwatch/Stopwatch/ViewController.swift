@@ -25,22 +25,31 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         //startStopButton.backgroundColor = UIColor.green
+        print("Application started!")
         
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(applicationDidBecomeActive),
+                                               name: Notification.Name("Timer"),
+                                               object: nil)
+    }
+    
+    @objc func applicationDidBecomeActive(notification: NSNotification) {
+        guard timerCounting else {return}
+        timer.invalidate()
     }
     
     //Reset button behaviour
     @IBAction func resetTapped(_ sender: Any) {
         //asking user if he want to reset timer
         let alert = UIAlertController(title: "Reset", message: "Reset the timer?", preferredStyle: .alert)
-        //yes option
+        //Yes option
         alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: {(_) in
             self.count = 0
             self.timer.invalidate()
             self.TimerLabel.text = self.makeTimeString(minutes: 0, seconds: 0)
             self.startStopButton.setTitle("Start", for: .normal)
-            //self.startStopButton.backgroundColor = UIColor.green
         }))
-        //no option
+        //Cancel option
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {(_) in
         //nothing
         }))
@@ -53,14 +62,12 @@ class ViewController: UIViewController {
             timerCounting = false
             timer.invalidate()
             startStopButton.setTitle("Start", for: .normal)
-            //startStopButton.backgroundColor = UIColor.green
-            
         }
         else{
          timerCounting = true
             startStopButton.setTitle("Stop", for: .normal)
-            //self.startStopButton.backgroundColor = UIColor.red
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerCounter), userInfo: nil, repeats: true)
+            RunLoop.current.add(timer, forMode: .common)
         }
     }
     

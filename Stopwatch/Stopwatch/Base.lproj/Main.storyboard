@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00 : 00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpu-3e-Pae">
-                                <rect key="frame" x="97" y="248" width="220" height="84"/>
+                                <rect key="frame" x="97" y="144" width="220" height="84"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="220" id="lR5-Ve-vbW"/>
                                 </constraints>
@@ -26,7 +26,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jQ6-aA-7p6">
-                                <rect key="frame" x="100" y="462" width="56" height="31"/>
+                                <rect key="frame" x="100" y="358" width="56" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Start"/>
                                 <connections>
@@ -34,7 +34,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kNv-gJ-HnQ">
-                                <rect key="frame" x="246" y="462" width="61" height="31"/>
+                                <rect key="frame" x="246" y="358" width="61" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Reset"/>
                                 <connections>
@@ -48,7 +48,7 @@
                             <constraint firstItem="jQ6-aA-7p6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="56S-LS-Xll"/>
                             <constraint firstItem="gpu-3e-Pae" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="CwH-ic-WwC"/>
                             <constraint firstItem="jQ6-aA-7p6" firstAttribute="width" secondItem="kNv-gJ-HnQ" secondAttribute="width" multiplier="0.918033" id="O9V-d0-nge"/>
-                            <constraint firstItem="gpu-3e-Pae" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="204" id="RA1-96-g9t"/>
+                            <constraint firstItem="gpu-3e-Pae" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="RA1-96-g9t"/>
                             <constraint firstItem="kNv-gJ-HnQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="jQ6-aA-7p6" secondAttribute="trailing" constant="8" symbolic="YES" id="qrc-PJ-oSM"/>
                             <constraint firstItem="jQ6-aA-7p6" firstAttribute="top" secondItem="gpu-3e-Pae" secondAttribute="bottom" constant="130" id="syE-rK-aVQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kNv-gJ-HnQ" secondAttribute="trailing" constant="107" id="tDc-qk-UMN"/>
