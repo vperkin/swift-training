@@ -38,7 +38,7 @@ class ViewController: UIViewController {
         if timerCounting {
             stop()
             stopButton.setTitle("Reset", for: .normal)
-            startButton.setTitle("Resum", for: .normal)
+            startButton.setTitle("Resume", for: .normal)
             timerCounting = false
         } else {
             self.count = 0
