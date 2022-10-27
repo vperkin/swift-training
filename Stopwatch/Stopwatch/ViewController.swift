@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  Stopwatch
 //
-//  Created by admin on 23.10.2022.
+//  Created by Vyacheslav Perkin on 23.10.2022.
 //
 
 import UIKit
@@ -44,13 +44,13 @@ class ViewController: UIViewController {
             
             let alert = UIAlertController(title: "Reset", message: "Reset the timer?", preferredStyle: .alert)
             
-            alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: {(_) in
-                self.count = 0
-                self.TimerLabel.text = self.makeTimeString(minutes: 0, seconds: 0)
-                self.startButton.isEnabled = true
-                self.stopButton.setTitle("Stop", for: .normal)
-                self.startButton.setTitle("Start", for: .normal)
-                self.stopButton.isEnabled = false
+            alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { [self](_) in
+                count = 0
+                TimerLabel.text = self.makeTimeString(minutes: 0, seconds: 0)
+                startButton.isEnabled = true
+                stopButton.setTitle("Stop", for: .normal)
+                startButton.setTitle("Start", for: .normal)
+                stopButton.isEnabled = false
             }))
             
             alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {(_) in
