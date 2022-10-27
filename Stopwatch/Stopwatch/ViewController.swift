@@ -10,65 +10,64 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var TimerLabel: UILabel!
-    
-    @IBOutlet weak var startStopButton: UIButton!
-    
-    @IBOutlet weak var resetButton: UIButton!
+    @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var stopButton: UIButton!
     
     var timer:Timer = Timer()
     var count:Int = 0
     var timerCounting:Bool = false
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        //startStopButton.backgroundColor = UIColor.green
-        print("Application started!")
-        
+        startButton.isEnabled = true
+        stopButton.isEnabled = false
+
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(applicationDidBecomeActive),
                                                name: Notification.Name("Timer"),
-                                               object: nil)
-    }
+                                               object: nil)}
     
+    //Событие происходит каждый раз при открытии, сворачивании и разворачивании приложения
     @objc func applicationDidBecomeActive(notification: NSNotification) {
         guard timerCounting else {return}
-        timer.invalidate()
+        startButton.isEnabled ? setTimer() : stop()
     }
     
-    //Reset button behaviour
-    @IBAction func resetTapped(_ sender: Any) {
-        //asking user if he want to reset timer
-        let alert = UIAlertController(title: "Reset", message: "Reset the timer?", preferredStyle: .alert)
-        //Yes option
-        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: {(_) in
-            self.count = 0
-            self.timer.invalidate()
-            self.TimerLabel.text = self.makeTimeString(minutes: 0, seconds: 0)
-            self.startStopButton.setTitle("Start", for: .normal)
-        }))
-        //Cancel option
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {(_) in
-        //nothing
-        }))
-        
-        self.present(alert, animated: true, completion: nil)
-    }
-    
-    @IBAction func startStopTapped(_ sender: Any) {
-        if(timerCounting){
+    //Stop-Reset button behaviour
+    @IBAction func StopTapped(_ sender: Any) {
+        if timerCounting {
+            stop()
+            stopButton.setTitle("Reset", for: .normal)
+            startButton.setTitle("Resum", for: .normal)
             timerCounting = false
-            timer.invalidate()
-            startStopButton.setTitle("Start", for: .normal)
+        } else {
+            self.count = 0
+            self.TimerLabel.text = self.makeTimeString(minutes: 0, seconds: 0)
+            startButton.isEnabled = true
+            stopButton.setTitle("Stop", for: .normal)
+            startButton.setTitle("Start", for: .normal)
+            stopButton.isEnabled = false
         }
-        else{
-         timerCounting = true
-            startStopButton.setTitle("Stop", for: .normal)
-            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerCounter), userInfo: nil, repeats: true)
-            RunLoop.current.add(timer, forMode: .common)
-        }
+        
+    }
+    
+    @IBAction func StartTapped(_ sender: Any) {
+        timerCounting = true
+        setTimer()
+        stopButton.setTitle("Stop", for: .normal)
+        startButton.setTitle("Start", for: .normal)
+    }
+    
+    private func setTimer() {
+           timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerCounter), userInfo: nil, repeats: true)
+           RunLoop.current.add(timer, forMode: .common)
+        startButton.isEnabled = false
+        stopButton.isEnabled = true
+    }
+    
+    private func stop() {
+        timer.invalidate()
+        startButton.isEnabled = true
     }
     
     @objc func timerCounter() -> Void {

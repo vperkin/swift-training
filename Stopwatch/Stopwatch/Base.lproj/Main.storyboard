@@ -30,15 +30,15 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Start"/>
                                 <connections>
-                                    <action selector="startStopTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="59B-r8-Zu7"/>
+                                    <action selector="StartTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vsb-C3-PRl"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kNv-gJ-HnQ">
                                 <rect key="frame" x="246" y="358" width="61" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Reset"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Stop"/>
                                 <connections>
-                                    <action selector="resetTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vkj-fw-9Xh"/>
+                                    <action selector="StopTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zl1-yw-U2O"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -57,8 +57,8 @@
                     </view>
                     <connections>
                         <outlet property="TimerLabel" destination="gpu-3e-Pae" id="KpQ-by-RtH"/>
-                        <outlet property="resetButton" destination="kNv-gJ-HnQ" id="kF0-B3-18d"/>
-                        <outlet property="startStopButton" destination="jQ6-aA-7p6" id="Mok-KA-w8N"/>
+                        <outlet property="startButton" destination="jQ6-aA-7p6" id="ygg-JN-Zt5"/>
+                        <outlet property="stopButton" destination="kNv-gJ-HnQ" id="WI1-ED-QLz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
