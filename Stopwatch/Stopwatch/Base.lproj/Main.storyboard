@@ -26,7 +26,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jQ6-aA-7p6">
-                                <rect key="frame" x="70" y="358" width="56" height="31"/>
+                                <rect key="frame" x="70" y="358" width="90" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="Xr0-QN-Qu0"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Start"/>
                                 <connections>
@@ -34,7 +37,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kNv-gJ-HnQ">
-                                <rect key="frame" x="288" y="358" width="56" height="31"/>
+                                <rect key="frame" x="254" y="358" width="90" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="hED-SK-Ia2"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Stop"/>
                                 <connections>
@@ -47,7 +53,6 @@
                         <constraints>
                             <constraint firstItem="jQ6-aA-7p6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="56S-LS-Xll"/>
                             <constraint firstItem="gpu-3e-Pae" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="CwH-ic-WwC"/>
-                            <constraint firstItem="jQ6-aA-7p6" firstAttribute="width" secondItem="kNv-gJ-HnQ" secondAttribute="width" id="O9V-d0-nge"/>
                             <constraint firstItem="gpu-3e-Pae" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="RA1-96-g9t"/>
                             <constraint firstItem="kNv-gJ-HnQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="jQ6-aA-7p6" secondAttribute="trailing" constant="8" symbolic="YES" id="qrc-PJ-oSM"/>
                             <constraint firstItem="jQ6-aA-7p6" firstAttribute="top" secondItem="gpu-3e-Pae" secondAttribute="bottom" constant="130" id="syE-rK-aVQ"/>
