@@ -33,7 +33,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Start"/>
                                 <connections>
-                                    <action selector="StartTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vsb-C3-PRl"/>
+                                    <action selector="startTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KUT-Hg-KxM"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kNv-gJ-HnQ">
@@ -44,7 +44,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Stop"/>
                                 <connections>
-                                    <action selector="StopTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zl1-yw-U2O"/>
+                                    <action selector="stopTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gct-dt-SbK"/>
                                 </connections>
                             </button>
                         </subviews>

@@ -27,23 +27,23 @@ class ViewController: UIViewController {
                                                name: Notification.Name("Timer"),
                                                object: nil)}
     
-    //Событие происходит каждый раз при открытии, сворачивании и разворачивании приложения
+    //code executing everytime when the app open, minimaze, maximize
     @objc func applicationDidBecomeActive(notification: NSNotification) {
         guard timerCounting else {return}
         startButton.isEnabled ? setTimer() : stop()
     }
     
     //Stop-Reset button behaviour
-    @IBAction func StopTapped(_ sender: Any) {
+    @IBAction func stopTapped(_ sender: Any) {
         if timerCounting {
             stop()
             stopButton.setTitle("Reset", for: .normal)
             startButton.setTitle("Resume", for: .normal)
             timerCounting = false
         } else {
-            
+            //initializing alert
             let alert = UIAlertController(title: "Reset", message: "Reset the timer?", preferredStyle: .alert)
-            
+            // yes option
             alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { [self](_) in
                 count = 0
                 TimerLabel.text = self.makeTimeString(minutes: 0, seconds: 0)
@@ -52,16 +52,16 @@ class ViewController: UIViewController {
                 startButton.setTitle("Start", for: .normal)
                 stopButton.isEnabled = false
             }))
-            
+            // cancel option
             alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {(_) in
-                    //nothing
+                    //do nothing
                     }))
 
             self.present(alert, animated: true, completion: nil)
                }
     }
     
-    @IBAction func StartTapped(_ sender: Any) {
+    @IBAction func startTapped(_ sender: Any) {
         timerCounting = true
         setTimer()
         stopButton.setTitle("Stop", for: .normal)
