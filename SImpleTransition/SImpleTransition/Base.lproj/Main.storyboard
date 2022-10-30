@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--RedVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="RedVC" customModule="SImpleTransition" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWA-i3-WAG">
+                                <rect key="frame" x="152" y="432.5" width="110" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="110" id="3Fn-Y7-R33"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Go to yellow"/>
+                                <connections>
+                                    <segue destination="3ex-9x-Svm" kind="show" identifier="redToYellow" id="RHc-eW-Wo3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kuu-03-Blg">
+                                <rect key="frame" x="127.5" y="503" width="159" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Go to yellow by code"/>
+                                <connections>
+                                    <action selector="onRedToYellowTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="auy-cn-DCv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                        <constraints>
+                            <constraint firstItem="Kuu-03-Blg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DBP-CW-WmR"/>
+                            <constraint firstItem="DWA-i3-WAG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RY3-6v-OZd"/>
+                            <constraint firstItem="DWA-i3-WAG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="U74-3b-5Ir"/>
+                            <constraint firstItem="Kuu-03-Blg" firstAttribute="top" secondItem="DWA-i3-WAG" secondAttribute="bottom" constant="39.5" id="fZc-Te-4eJ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-297" y="69"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="7JG-Aw-95H">
+            <objects>
+                <viewController id="3ex-9x-Svm" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pEl-Ru-ylf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="g9X-9j-4iS"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="COb-uj-baL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="juE-A5-Ziw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="757" y="69"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
