@@ -13,9 +13,9 @@ extension UIViewController {
         return String(describing: Self.self)
     }
     static func initFromSb(_ sb:String = "Main")-> UIViewController? {
-        let Storyboard = UIStoryboard(name:sb, bundle:nil)
-        
-        
+        let storyboard = UIStoryboard(name:sb, bundle:nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: id)
+        return vc
     }
     
     

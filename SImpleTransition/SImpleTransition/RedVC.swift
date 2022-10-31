@@ -15,10 +15,20 @@ class RedVC: UIViewController {
     }
 
     @IBAction func onRedToYellowTapped(_ sender: Any) {
-        let vc = YellowVC()
-        self.present(<#T##viewControllerToPresent: UIViewController##UIViewController#>, animated: true)
+        if let vc = YellowVC.initFromSb() {
+            //self.present(UINavigationController(rootViewController: vc), animated: true)
+            self.navigationController?.pushViewController(vc, animated: true)
+            //vc.modalPresentationStyle = .fullScreen
+            //self.present(vc, animated: true)
+        }
         
     }
-    
+    override func unwind(for unwindSegue: UIStoryboardSegue, towards subsequentVC: UIViewController) {
+        
+    }
+    @IBAction func unwindToRed(_ unwindSegue: UIStoryboardSegue) {
+        let sourceViewController = unwindSegue.source
+        // Use data from the view controller which initiated the unwind segue
+    }
 }
 
