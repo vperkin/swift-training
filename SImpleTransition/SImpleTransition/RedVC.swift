@@ -45,7 +45,7 @@ class RedVC: BaseVC {
     }
     @IBAction func unwindToRed(_ unwindSegue: UIStoryboardSegue) {
         if let sourceViewController = unwindSegue.source as? GreenOutputProtocol {
-            print(sourceViewController.outputData)
+            print(sourceViewController.outputData as Any)
         }
         // Use data from the view controller which initiated the unwind segue
     }
