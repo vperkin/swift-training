@@ -7,8 +7,12 @@
 
 import UIKit
 
-class GreenVC: UIViewController {
+protocol GreenOutputProtocol:OutputProtocol {
     
+}
+
+class GreenVC: UIViewController, GreenOutputProtocol {
+    var outputData: Any? = "Good bye! From Output protocol."
     var output: String = "Good bye!"
 
     override func viewDidLoad() {

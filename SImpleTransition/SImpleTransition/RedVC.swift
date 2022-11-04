@@ -7,7 +7,11 @@
 
 import UIKit
 
-class RedVC: UIViewController {
+protocol IRedInput:InputProtocol {
+    
+}
+
+class RedVC: BaseVC {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,8 +44,8 @@ class RedVC: UIViewController {
         
     }
     @IBAction func unwindToRed(_ unwindSegue: UIStoryboardSegue) {
-        if let sourceViewController = unwindSegue.source as? GreenVC {
-            print(sourceViewController.output)
+        if let sourceViewController = unwindSegue.source as? GreenOutputProtocol {
+            print(sourceViewController.outputData)
         }
         // Use data from the view controller which initiated the unwind segue
     }
