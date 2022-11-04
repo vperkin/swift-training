@@ -8,6 +8,8 @@
 import UIKit
 
 class GreenVC: UIViewController {
+    
+    var output: String = "Good bye!"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,18 +25,23 @@ class GreenVC: UIViewController {
         self.navigationController?.popToRootViewController(animated: false)
     }
     
-    
+    //вызов сигвея
     @IBAction func onGoToRootByCallingSeague(_ sender: Any) {
         self.performSegue(withIdentifier: "gotoroot", sender: self)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("Appear Green")
     }
-    */
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        print("Dissapear Green")
+        super.viewWillDisappear(animated)
+    }
+    
+    override func willMove(toParent parent: UIViewController?) {
+        if parent == nil{print("Destroy Green")}
+    }
 
 }

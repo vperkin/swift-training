@@ -24,7 +24,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Go to yellow by seague"/>
                                 <connections>
-                                    <segue destination="3ex-9x-Svm" kind="show" identifier="redToYellow" id="RHc-eW-Wo3"/>
+                                    <segue destination="3ex-9x-Svm" kind="show" identifier="redtoyellow" id="RHc-eW-Wo3"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kuu-03-Blg">
@@ -35,6 +35,14 @@
                                     <action selector="onRedToYellowTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="auy-cn-DCv"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PVB-Wc-wxg">
+                                <rect key="frame" x="154.5" y="595" width="105" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Go to Purple"/>
+                                <connections>
+                                    <segue destination="Stv-tw-J2s" kind="show" identifier="redtopurple" id="cvH-8U-fbA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemRedColor"/>
@@ -42,7 +50,9 @@
                             <constraint firstItem="Kuu-03-Blg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DBP-CW-WmR"/>
                             <constraint firstItem="DWA-i3-WAG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RY3-6v-OZd"/>
                             <constraint firstItem="DWA-i3-WAG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="U74-3b-5Ir"/>
+                            <constraint firstItem="PVB-Wc-wxg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="f0C-7P-U5p"/>
                             <constraint firstItem="Kuu-03-Blg" firstAttribute="top" secondItem="DWA-i3-WAG" secondAttribute="bottom" constant="39.5" id="fZc-Te-4eJ"/>
+                            <constraint firstItem="PVB-Wc-wxg" firstAttribute="top" secondItem="Kuu-03-Blg" secondAttribute="bottom" constant="61" id="njJ-Ux-j8U"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="1jZ-I6-YX3"/>
@@ -64,7 +74,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Go to green VC"/>
                                 <connections>
-                                    <segue destination="onT-ib-GDk" kind="show" id="sef-8h-rac"/>
+                                    <segue destination="onT-ib-GDk" kind="show" identifier="yellowtogreen" id="sef-8h-rac"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -79,7 +89,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="juE-A5-Ziw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1666.6666666666667" y="68.973214285714278"/>
+            <point key="canvasLocation" x="1546" y="69"/>
+        </scene>
+        <!--PurpleVC-->
+        <scene sceneID="cx4-pJ-N0q">
+            <objects>
+                <viewController storyboardIdentifier="PurpleVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Stv-tw-J2s" customClass="PurpleVC" customModule="SImpleTransition" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2yu-KI-APL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="EAe-X6-WSw"/>
+                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="kDN-Oo-M6j"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="32D-H0-rdY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1545" y="838"/>
         </scene>
         <!--GreenVC-->
         <scene sceneID="Fcd-6C-zek">
@@ -106,7 +132,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lLK-Jt-lVN">
-                                <rect key="frame" x="105" y="412" width="205" height="31"/>
+                                <rect key="frame" x="104.5" y="412" width="205" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Go to root by calling seague"/>
                                 <connections>
@@ -121,18 +147,28 @@
                                     <action selector="onBackTapped:" destination="onT-ib-GDk" eventType="touchUpInside" id="MqB-vi-qo0"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Em-4a-h8T">
+                                <rect key="frame" x="154.5" y="481" width="105" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Go to Purple"/>
+                                <connections>
+                                    <segue destination="Stv-tw-J2s" kind="show" identifier="greentopurple" id="gGP-iq-iao"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hb3-qH-QBn"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                         <constraints>
-                            <constraint firstItem="lLK-Jt-lVN" firstAttribute="top" secondItem="8sP-rG-2DW" secondAttribute="bottom" constant="50" id="1WV-89-7Da"/>
-                            <constraint firstItem="cdw-fa-W4b" firstAttribute="top" secondItem="hb3-qH-QBn" secondAttribute="top" constant="85" id="2bc-Vn-XUx"/>
-                            <constraint firstItem="lLK-Jt-lVN" firstAttribute="centerX" secondItem="hb3-qH-QBn" secondAttribute="centerX" id="A2k-tN-mPc"/>
-                            <constraint firstItem="Tv4-Hq-B2A" firstAttribute="top" secondItem="cdw-fa-W4b" secondAttribute="bottom" constant="46" id="ClZ-KK-X97"/>
-                            <constraint firstItem="cdw-fa-W4b" firstAttribute="centerX" secondItem="hb3-qH-QBn" secondAttribute="centerX" id="JL4-ly-9QW"/>
-                            <constraint firstItem="8sP-rG-2DW" firstAttribute="centerX" secondItem="hb3-qH-QBn" secondAttribute="centerX" id="hdY-Gd-1pm"/>
-                            <constraint firstItem="8sP-rG-2DW" firstAttribute="top" secondItem="Tv4-Hq-B2A" secondAttribute="bottom" constant="50" id="qC7-Dp-jfK"/>
-                            <constraint firstItem="Tv4-Hq-B2A" firstAttribute="centerX" secondItem="hb3-qH-QBn" secondAttribute="centerX" id="u6U-jX-UtV"/>
+                            <constraint firstItem="8sP-rG-2DW" firstAttribute="centerX" secondItem="KUz-bH-sno" secondAttribute="centerX" id="54O-gR-l7h"/>
+                            <constraint firstItem="Tv4-Hq-B2A" firstAttribute="top" secondItem="cdw-fa-W4b" secondAttribute="bottom" constant="46" id="5Ce-9p-fVL"/>
+                            <constraint firstItem="8sP-rG-2DW" firstAttribute="top" secondItem="Tv4-Hq-B2A" secondAttribute="bottom" constant="50" id="D0D-ZY-UIO"/>
+                            <constraint firstItem="cdw-fa-W4b" firstAttribute="centerX" secondItem="hb3-qH-QBn" secondAttribute="centerX" id="REC-p8-JXu"/>
+                            <constraint firstItem="4Em-4a-h8T" firstAttribute="top" secondItem="lLK-Jt-lVN" secondAttribute="bottom" constant="38" id="V6l-SW-RKz"/>
+                            <constraint firstItem="4Em-4a-h8T" firstAttribute="centerX" secondItem="KUz-bH-sno" secondAttribute="centerX" id="apw-62-PNy"/>
+                            <constraint firstItem="lLK-Jt-lVN" firstAttribute="centerX" secondItem="KUz-bH-sno" secondAttribute="centerX" id="iBh-oQ-Bdr"/>
+                            <constraint firstItem="cdw-fa-W4b" firstAttribute="top" secondItem="hb3-qH-QBn" secondAttribute="top" constant="85" id="pmR-Hl-myP"/>
+                            <constraint firstItem="Tv4-Hq-B2A" firstAttribute="centerX" secondItem="KUz-bH-sno" secondAttribute="centerX" id="rJW-3M-JZ6"/>
+                            <constraint firstItem="lLK-Jt-lVN" firstAttribute="top" secondItem="8sP-rG-2DW" secondAttribute="bottom" constant="50" id="tMA-FM-wk9"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="aM7-ot-Px5"/>
@@ -161,9 +197,15 @@
             <point key="canvasLocation" x="-297.10144927536237" y="68.973214285714278"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="cvH-8U-fbA"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

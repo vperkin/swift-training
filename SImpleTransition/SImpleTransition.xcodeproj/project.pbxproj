@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		843B24C5290F8A9D0097E6F9 /* GreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B24C4290F8A9D0097E6F9 /* GreenVC.swift */; };
+		8452C1D4291304AF003CDEC9 /* PurpleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452C1D3291304AF003CDEC9 /* PurpleVC.swift */; };
 		8456F650290EF1E50057F75C /* YellowVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8456F64F290EF1E50057F75C /* YellowVC.swift */; };
 		84581270290D363B005F6364 /* UIVC+init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8458126F290D363B005F6364 /* UIVC+init.swift */; };
 		84C26D08290C0CC900BF1FB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C26D07290C0CC900BF1FB0 /* AppDelegate.swift */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		843B24C4290F8A9D0097E6F9 /* GreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenVC.swift; sourceTree = "<group>"; };
+		8452C1D3291304AF003CDEC9 /* PurpleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurpleVC.swift; sourceTree = "<group>"; };
 		8456F64F290EF1E50057F75C /* YellowVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = YellowVC.swift; path = ../YellowVC.swift; sourceTree = "<group>"; };
 		8458126F290D363B005F6364 /* UIVC+init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVC+init.swift"; sourceTree = "<group>"; };
 		84C26D04290C0CC900BF1FB0 /* SImpleTransition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SImpleTransition.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,6 +73,7 @@
 				84C26D0B290C0CC900BF1FB0 /* RedVC.swift */,
 				8456F64F290EF1E50057F75C /* YellowVC.swift */,
 				843B24C4290F8A9D0097E6F9 /* GreenVC.swift */,
+				8452C1D3291304AF003CDEC9 /* PurpleVC.swift */,
 				8458126F290D363B005F6364 /* UIVC+init.swift */,
 			);
 			path = SImpleTransition;
@@ -152,6 +155,7 @@
 				84C26D08290C0CC900BF1FB0 /* AppDelegate.swift in Sources */,
 				8456F650290EF1E50057F75C /* YellowVC.swift in Sources */,
 				84581270290D363B005F6364 /* UIVC+init.swift in Sources */,
+				8452C1D4291304AF003CDEC9 /* PurpleVC.swift in Sources */,
 				84C26D0A290C0CC900BF1FB0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
