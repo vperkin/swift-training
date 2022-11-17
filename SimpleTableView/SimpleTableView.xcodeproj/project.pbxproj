@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		845D050C292533A4008C56C3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D050B292533A4008C56C3 /* DetailViewController.swift */; };
 		8463487A29214BAE00DF2140 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8463487929214BAE00DF2140 /* AppDelegate.swift */; };
 		8463487C29214BAE00DF2140 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8463487B29214BAE00DF2140 /* SceneDelegate.swift */; };
 		8463487E29214BAE00DF2140 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8463487D29214BAE00DF2140 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		845D050B292533A4008C56C3 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		8463487629214BAE00DF2140 /* SimpleTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8463487929214BAE00DF2140 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8463487B29214BAE00DF2140 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				8463487929214BAE00DF2140 /* AppDelegate.swift */,
 				8463487B29214BAE00DF2140 /* SceneDelegate.swift */,
 				8463487D29214BAE00DF2140 /* ViewController.swift */,
+				845D050B292533A4008C56C3 /* DetailViewController.swift */,
 				8463487F29214BAE00DF2140 /* Main.storyboard */,
 				8463488229214BB000DF2140 /* Assets.xcassets */,
 				8463488429214BB000DF2140 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				8463487E29214BAE00DF2140 /* ViewController.swift in Sources */,
 				8463487A29214BAE00DF2140 /* AppDelegate.swift in Sources */,
 				8463487C29214BAE00DF2140 /* SceneDelegate.swift in Sources */,
+				845D050C292533A4008C56C3 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

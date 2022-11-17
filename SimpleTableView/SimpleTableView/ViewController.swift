@@ -11,7 +11,7 @@ class ViewController: UIViewController {
     
     var testTableView = UITableView()
     var identifier = "MyCell"
-    var dataArray = ["Swift", "C#", "JavaScript", "C++", "Java", "Python", "Go", "PHP"]
+    var dataArray = ["Swift", "C#", "JavaScript", "C++", "Java", "Python", "Go", "PHP", "Visual Basic", "Perl", "Ruby", "D", "Groovy", "Objective-C", "Erlang", "Kotlin", "Rust", "Delphi"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +26,11 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailViewControler = DetailViewController()
+        detailViewControler.language = dataArray[indexPath.row]
+        present(detailViewControler, animated: true)
+    }
     
 }
 
