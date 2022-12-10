@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         testTableView = UITableView(frame: view.bounds, style: .plain )
-        testTableView.register(UITableViewCell.self, forCellReuseIdentifier: identifier)
+        testTableView.register(DetailTableViewCell.self, forCellReuseIdentifier: identifier)
         testTableView.delegate = self
         testTableView.dataSource = self
         view.addSubview(testTableView)
@@ -40,8 +40,8 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
-        cell.textLabel?.text = dataArray[indexPath.row]
-        return cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as? DetailTableViewCell
+        cell?.setLanguage(language: dataArray[indexPath.row])
+        return cell ?? DetailTableViewCell()
     }
 }
