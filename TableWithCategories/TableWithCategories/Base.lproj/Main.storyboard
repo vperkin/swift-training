@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,11 +20,44 @@
                     <navigationItem key="navigationItem" id="xaF-cb-iKx"/>
                     <connections>
                         <outlet property="tblAppleProducts" destination="2Wn-yb-Em6" id="SRS-Kp-Y0m"/>
+                        <segue destination="mZy-Le-MC0" kind="show" identifier="showdetail" id="NsI-sO-kb5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="643" y="76"/>
+            <point key="canvasLocation" x="319" y="76"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="DkD-Rf-CnD">
+            <objects>
+                <viewController id="mZy-Le-MC0" customClass="DetailViewController" customModule="TableWithCategories" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="emR-hO-Q2C">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aNk-BC-nea">
+                                <rect key="frame" x="10" y="108" width="394" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="D8x-Pr-udk"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <constraints>
+                            <constraint firstItem="aNk-BC-nea" firstAttribute="leading" secondItem="D8x-Pr-udk" secondAttribute="leading" constant="10" id="UgC-7c-hKv"/>
+                            <constraint firstItem="D8x-Pr-udk" firstAttribute="trailing" secondItem="aNk-BC-nea" secondAttribute="trailing" constant="10" id="YOf-Pm-635"/>
+                            <constraint firstItem="aNk-BC-nea" firstAttribute="top" secondItem="D8x-Pr-udk" secondAttribute="top" constant="20" id="Z4D-1V-ubi"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="RrT-Ld-dMa"/>
+                    <connections>
+                        <outlet property="lblAppleProduct" destination="aNk-BC-nea" id="twN-aQ-kXV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="njL-UL-EZg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1072" y="76"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="a9c-hn-qLq">
@@ -45,6 +79,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
