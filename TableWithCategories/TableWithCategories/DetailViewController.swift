@@ -8,11 +8,17 @@
 import UIKit
 
 class DetailViewController: UIViewController {
+    var product: AppleProducts?
+    
+    
 
+    
     @IBOutlet weak var lblAppleProduct:UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        lblAppleProduct.text = "\(product?.productName ?? "product not found") is a \(product?.productCategory ?? "category not found")"
 
         // Do any additional setup after loading the view.
     }

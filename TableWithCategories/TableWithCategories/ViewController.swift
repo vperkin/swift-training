@@ -9,11 +9,11 @@ import UIKit
 
 class AppleProducts{
     var productName: String?
-    var prodctCategory: String?
+    var productCategory: String?
     
     init(prName: String?, prCategory: String?) {
         self.productName = prName
-        self.prodctCategory = prCategory
+        self.productCategory = prCategory
     }
 }
 
@@ -29,14 +29,21 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             cell = UITableViewCell(style: .subtitle, reuseIdentifier: "productstable")
         }
         cell?.textLabel?.text = productArray[indexPath.row].productName
-        cell?.detailTextLabel?.text = productArray[indexPath.row].prodctCategory
+        cell?.detailTextLabel?.text = productArray[indexPath.row].productCategory
         return cell!
     }
     
     //Delegate methods
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-        tableView.deselectRow(at: indexPath, animated: true)
+        //tableView.deselectRow(at: indexPath, animated: true)
         performSegue(withIdentifier: "showdetail", sender: self)
+    }
+    
+    // чёрная магия!
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? DetailViewController {
+            destination.product = productArray[tblAppleProducts.indexPathForSelectedRow!.row]
+        }
     }
     
     @IBOutlet weak var tblAppleProducts: UITableView!
@@ -55,10 +62,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let iMac = AppleProducts(prName: "iMac", prCategory: "Desktop")
         productArray.append(iMac)
         
-        let iPhone = AppleProducts(prName: "iMac", prCategory: "Phone")
+        let iPhone = AppleProducts(prName: "iPhone", prCategory: "Phone")
         productArray.append(iPhone)
         
-        let iPad = AppleProducts(prName: "iMac", prCategory: "Tablet")
+        let iPad = AppleProducts(prName: "iPad", prCategory: "Tablet")
         productArray.append(iPad)
         
         tblAppleProducts.dataSource = self
