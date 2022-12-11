@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8440E7782944AC16003FC89E /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440E7772944AC16003FC89E /* ProductTableViewCell.swift */; };
 		844D1DCE294374420001017C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844D1DCD294374420001017C /* AppDelegate.swift */; };
 		844D1DD0294374420001017C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844D1DCF294374420001017C /* SceneDelegate.swift */; };
 		844D1DD2294374420001017C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844D1DD1294374420001017C /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8440E7772944AC16003FC89E /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		844D1DCA294374420001017C /* TableWithCategories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableWithCategories.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		844D1DCD294374420001017C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		844D1DCF294374420001017C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				844D1DCF294374420001017C /* SceneDelegate.swift */,
 				844D1DD1294374420001017C /* ViewController.swift */,
 				844D1DE129442AB10001017C /* DetailViewController.swift */,
+				8440E7772944AC16003FC89E /* ProductTableViewCell.swift */,
 				844D1DD3294374420001017C /* Main.storyboard */,
 				844D1DD6294374430001017C /* Assets.xcassets */,
 				844D1DD8294374430001017C /* LaunchScreen.storyboard */,
@@ -143,6 +146,7 @@
 			files = (
 				844D1DD2294374420001017C /* ViewController.swift in Sources */,
 				844D1DCE294374420001017C /* AppDelegate.swift in Sources */,
+				8440E7782944AC16003FC89E /* ProductTableViewCell.swift in Sources */,
 				844D1DD0294374420001017C /* SceneDelegate.swift in Sources */,
 				844D1DE229442AB10001017C /* DetailViewController.swift in Sources */,
 			);

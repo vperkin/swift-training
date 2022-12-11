@@ -24,13 +24,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCell(withIdentifier: "productstable")
-        if cell == nil {
-            cell = UITableViewCell(style: .subtitle, reuseIdentifier: "productstable")
-        }
-        cell?.textLabel?.text = productArray[indexPath.row].productName
-        cell?.detailTextLabel?.text = productArray[indexPath.row].productCategory
-        return cell!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "productstable") as! ProductTableViewCell
+        
+        cell.productLabel?.text = productArray[indexPath.row].productName
+        cell.categoryLabel?.text = productArray[indexPath.row].productCategory
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView , heightForRowAt: IndexPath) -> CGFloat {
+        return 60.0
     }
     
     //Delegate methods
@@ -74,4 +77,3 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
     }
 }
-

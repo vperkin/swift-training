@@ -16,6 +16,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="productstable" rowHeight="60" id="6c6-pB-qqC" customClass="ProductTableViewCell" customModule="TableWithCategories" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6c6-pB-qqC" id="Mph-Wt-E6l">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nmU-HW-ofx">
+                                            <rect key="frame" x="20" y="32" width="71" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uan-lD-fJ2">
+                                            <rect key="frame" x="20" y="7" width="61" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="uan-lD-fJ2" secondAttribute="trailing" constant="20" symbolic="YES" id="5ZF-kO-8GS"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="nmU-HW-ofx" secondAttribute="trailing" constant="20" symbolic="YES" id="DNI-Ap-cCK"/>
+                                        <constraint firstAttribute="bottom" secondItem="nmU-HW-ofx" secondAttribute="bottom" constant="7" id="XDi-gy-oKT"/>
+                                        <constraint firstItem="nmU-HW-ofx" firstAttribute="leading" secondItem="uan-lD-fJ2" secondAttribute="leading" id="Yom-P1-GQu"/>
+                                        <constraint firstItem="nmU-HW-ofx" firstAttribute="leading" secondItem="Mph-Wt-E6l" secondAttribute="leadingMargin" id="ZKo-oz-Wlu"/>
+                                        <constraint firstItem="nmU-HW-ofx" firstAttribute="top" secondItem="uan-lD-fJ2" secondAttribute="bottom" constant="4" id="k5x-OM-tUB"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="categoryLabel" destination="nmU-HW-ofx" id="Q6y-AX-8dN"/>
+                                    <outlet property="productLabel" destination="uan-lD-fJ2" id="10X-0D-Mrp"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
                     </tableView>
                     <navigationItem key="navigationItem" id="xaF-cb-iKx"/>
                     <connections>
@@ -25,7 +61,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="319" y="76"/>
+            <point key="canvasLocation" x="318.84057971014494" y="75.669642857142847"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="DkD-Rf-CnD">
